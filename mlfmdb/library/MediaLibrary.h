@@ -6,8 +6,11 @@
 #import <Foundation/Foundation.h>
 
 
-@interface MediaLibrary : NSObject
+@interface MediaLibrary : NSObject {
+@protected
+    FMDatabaseQueue *_databaseQueue;
+}
 
-+ (void) setup;
++ (id) sharedInstance;
 
 @end

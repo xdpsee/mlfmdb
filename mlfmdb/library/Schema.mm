@@ -19,6 +19,9 @@ NSString *const kCreateMediaItemTable = @"create table if not exists medias\n"
                                         "    created_date  datetime     not null,\n"
                                         "    modified_date datetime     not null\n"
                                         ");";
+NSString *const kInsertMediaItemTable = @"insert into medias"
+                                        "(id,source,uri,grouping,title,artist,album,genre,composer,track,year,duration,created_date,modified_date) "
+                                        "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 NSString *const kCreateMediaArtistTable = @"create table if not exists artists\n"
                                           "(\n"

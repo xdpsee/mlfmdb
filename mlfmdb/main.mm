@@ -2,13 +2,13 @@
 #import <Foundation/Foundation.h>
 #import "MediaItem.h"
 #import "MediaLibrary.h"
+#import "MediaLibrary+Operation.h"
 
 static void __test();
 
 int main(int argc, const char *argv[]) {
 
-
-    [MediaLibrary setup];
+    [MediaLibrary sharedInstance];
 
     __test();
 
@@ -24,5 +24,6 @@ void __test() {
 
     mediaItem.id = @"12345678";
 
+    [[MediaLibrary sharedInstance] insertMediaItem:mediaItem];
 
 }
