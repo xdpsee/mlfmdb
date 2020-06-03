@@ -1,0 +1,403 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2AACB5E307E10A5F50DF0E2 /* libPods-mlfmdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E92553129158B47706166F4 /* libPods-mlfmdb.a */; };
+		ECF310AB57023FCB81C72DE9 /* MediaItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF318653F7B4C3335FEBB58 /* MediaItem.mm */; };
+		ECF31197B7E7F68189C4C8F6 /* MediaArtistItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31D03764A70C206054F71 /* MediaArtistItem.mm */; };
+		ECF31318FFE04A815C814E41 /* MediaGenre.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31D69CC71779D470C98FA /* MediaGenre.mm */; };
+		ECF313DFB2FFA3047BCCF7E9 /* MediaGenreItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */; };
+		ECF313EC3AFB824FB9B668AA /* MediaLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF317D87216308D295EE5D5 /* MediaLibrary.mm */; };
+		ECF3185686494BEE69F12D2D /* MediaDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */; };
+		ECF319845EF088A0C82BE21B /* MediaAlbum.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF3140E03BD021A4CBE9853 /* MediaAlbum.mm */; };
+		ECF3199493834BF97FCBCC7C /* MediaAlbumArtist.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */; };
+		ECF31A0404CB92069AE5C483 /* MediaDirectoryItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31BB745FA7496330846C5 /* MediaDirectoryItem.mm */; };
+		ECF31A666811BDB6FA560FF5 /* MediaAlbumItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */; };
+		ECF31DC244AF4DECCA7BC9D8 /* MediaArtist.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31FBFC1DD17DD6BEB1448 /* MediaArtist.mm */; };
+		ECF31DDA95B97A5461674B9B /* Schema.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31E9A66EB59C90ECD02DA /* Schema.mm */; };
+		ECF31E7B2B23B6CBD135F83C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF3122F16B76D7ACFC6EDC2 /* main.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECF31FA667EFF6DB86161688 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9E92553129158B47706166F4 /* libPods-mlfmdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mlfmdb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCEC0D263BD3AEAC644D48B1 /* Pods-mlfmdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlfmdb.debug.xcconfig"; path = "Target Support Files/Pods-mlfmdb/Pods-mlfmdb.debug.xcconfig"; sourceTree = "<group>"; };
+		ECCE3742DD0A1F3AD29A7A39 /* Pods-mlfmdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlfmdb.release.xcconfig"; path = "Target Support Files/Pods-mlfmdb/Pods-mlfmdb.release.xcconfig"; sourceTree = "<group>"; };
+		ECF31141A20BC01B7C020E9A /* MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItem.h; sourceTree = "<group>"; };
+		ECF311EBC4EB361A095077F9 /* MediaGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaGenre.h; sourceTree = "<group>"; };
+		ECF31220DF31C6E7F4E8F9A1 /* MediaAlbumArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAlbumArtist.h; sourceTree = "<group>"; };
+		ECF3122F16B76D7ACFC6EDC2 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaGenreItem.mm; sourceTree = "<group>"; };
+		ECF3133DC71CBB3FA5162A12 /* MediaDirectoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDirectoryItem.h; sourceTree = "<group>"; };
+		ECF31383AE774AFCEADA49D4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		ECF313868AF818239797F76D /* MediaDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDirectory.h; sourceTree = "<group>"; };
+		ECF3140E03BD021A4CBE9853 /* MediaAlbum.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbum.mm; sourceTree = "<group>"; };
+		ECF31482837C5C2C850D1371 /* MediaArtistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaArtistItem.h; sourceTree = "<group>"; };
+		ECF3158B60853909E67F58F0 /* MediaGenreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaGenreItem.h; sourceTree = "<group>"; };
+		ECF317D87216308D295EE5D5 /* MediaLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaLibrary.mm; sourceTree = "<group>"; };
+		ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumItem.mm; sourceTree = "<group>"; };
+		ECF318653F7B4C3335FEBB58 /* MediaItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaItem.mm; sourceTree = "<group>"; };
+		ECF31947148A84DB610CABAE /* Schema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schema.h; sourceTree = "<group>"; };
+		ECF3195F8B691AECF8EB218C /* MediaAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAlbum.h; sourceTree = "<group>"; };
+		ECF31AC49F1D13736C7E1C6A /* MediaLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaLibrary.h; sourceTree = "<group>"; };
+		ECF31BB745FA7496330846C5 /* MediaDirectoryItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaDirectoryItem.mm; sourceTree = "<group>"; };
+		ECF31BDFE3212207D47A7987 /* mlfmdb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mlfmdb; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECF31C6514D718283627DA1A /* MediaAlbumItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAlbumItem.h; sourceTree = "<group>"; };
+		ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumArtist.mm; sourceTree = "<group>"; };
+		ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaDirectory.mm; sourceTree = "<group>"; };
+		ECF31D03764A70C206054F71 /* MediaArtistItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaArtistItem.mm; sourceTree = "<group>"; };
+		ECF31D69CC71779D470C98FA /* MediaGenre.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaGenre.mm; sourceTree = "<group>"; };
+		ECF31E9A66EB59C90ECD02DA /* Schema.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Schema.mm; sourceTree = "<group>"; };
+		ECF31EF01B11C45220781AA4 /* MediaArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaArtist.h; sourceTree = "<group>"; };
+		ECF31FBFC1DD17DD6BEB1448 /* MediaArtist.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaArtist.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECF315A097598CD89284F313 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2AACB5E307E10A5F50DF0E2 /* libPods-mlfmdb.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC3C01DE276FF59B8D615D70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E92553129158B47706166F4 /* libPods-mlfmdb.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECF3166104C175CFABBC700E /* mlfmdb */ = {
+			isa = PBXGroup;
+			children = (
+				ECF3122F16B76D7ACFC6EDC2 /* main.mm */,
+				ECF31BF169C7011A4A0E64E4 /* library */,
+				ECF31383AE774AFCEADA49D4 /* Constants.h */,
+			);
+			path = mlfmdb;
+			sourceTree = "<group>";
+		};
+		ECF3173F82DC08FA80CB8B5C = {
+			isa = PBXGroup;
+			children = (
+				ECF31CE21F093918AAEA2EAB /* Products */,
+				ECF3166104C175CFABBC700E /* mlfmdb */,
+				F45BF62B6EE9F777BF24AF9E /* Pods */,
+				CC3C01DE276FF59B8D615D70 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		ECF31BF169C7011A4A0E64E4 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				ECF318653F7B4C3335FEBB58 /* MediaItem.mm */,
+				ECF31141A20BC01B7C020E9A /* MediaItem.h */,
+				ECF3140E03BD021A4CBE9853 /* MediaAlbum.mm */,
+				ECF3195F8B691AECF8EB218C /* MediaAlbum.h */,
+				ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */,
+				ECF31C6514D718283627DA1A /* MediaAlbumItem.h */,
+				ECF31FBFC1DD17DD6BEB1448 /* MediaArtist.mm */,
+				ECF31EF01B11C45220781AA4 /* MediaArtist.h */,
+				ECF31D69CC71779D470C98FA /* MediaGenre.mm */,
+				ECF311EBC4EB361A095077F9 /* MediaGenre.h */,
+				ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */,
+				ECF31220DF31C6E7F4E8F9A1 /* MediaAlbumArtist.h */,
+				ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */,
+				ECF3158B60853909E67F58F0 /* MediaGenreItem.h */,
+				ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */,
+				ECF313868AF818239797F76D /* MediaDirectory.h */,
+				ECF31BB745FA7496330846C5 /* MediaDirectoryItem.mm */,
+				ECF3133DC71CBB3FA5162A12 /* MediaDirectoryItem.h */,
+				ECF31D03764A70C206054F71 /* MediaArtistItem.mm */,
+				ECF31482837C5C2C850D1371 /* MediaArtistItem.h */,
+				ECF317D87216308D295EE5D5 /* MediaLibrary.mm */,
+				ECF31AC49F1D13736C7E1C6A /* MediaLibrary.h */,
+				ECF31947148A84DB610CABAE /* Schema.h */,
+				ECF31E9A66EB59C90ECD02DA /* Schema.mm */,
+			);
+			path = library;
+			sourceTree = "<group>";
+		};
+		ECF31CE21F093918AAEA2EAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECF31BDFE3212207D47A7987 /* mlfmdb */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F45BF62B6EE9F777BF24AF9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC0D263BD3AEAC644D48B1 /* Pods-mlfmdb.debug.xcconfig */,
+				ECCE3742DD0A1F3AD29A7A39 /* Pods-mlfmdb.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECF31A20E143A111E66AF6E5 /* mlfmdb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECF3124A42C62FA1D368400B /* Build configuration list for PBXNativeTarget "mlfmdb" */;
+			buildPhases = (
+				8F7D7E6E4CA41982DDA79AE6 /* [CP] Check Pods Manifest.lock */,
+				ECF31CBC86F8522AB52DE236 /* Sources */,
+				ECF315A097598CD89284F313 /* Frameworks */,
+				ECF31FA667EFF6DB86161688 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mlfmdb;
+			productName = mlfmdb;
+			productReference = ECF31BDFE3212207D47A7987 /* mlfmdb */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECF310E7A49B6FB486261ABE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = zhenhui;
+			};
+			buildConfigurationList = ECF31B080B727C5359433A1C /* Build configuration list for PBXProject "mlfmdb" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ECF3173F82DC08FA80CB8B5C;
+			productRefGroup = ECF31CE21F093918AAEA2EAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECF31A20E143A111E66AF6E5 /* mlfmdb */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F7D7E6E4CA41982DDA79AE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mlfmdb-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECF31CBC86F8522AB52DE236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECF31E7B2B23B6CBD135F83C /* main.mm in Sources */,
+				ECF310AB57023FCB81C72DE9 /* MediaItem.mm in Sources */,
+				ECF319845EF088A0C82BE21B /* MediaAlbum.mm in Sources */,
+				ECF31A666811BDB6FA560FF5 /* MediaAlbumItem.mm in Sources */,
+				ECF31DC244AF4DECCA7BC9D8 /* MediaArtist.mm in Sources */,
+				ECF31318FFE04A815C814E41 /* MediaGenre.mm in Sources */,
+				ECF3199493834BF97FCBCC7C /* MediaAlbumArtist.mm in Sources */,
+				ECF313DFB2FFA3047BCCF7E9 /* MediaGenreItem.mm in Sources */,
+				ECF3185686494BEE69F12D2D /* MediaDirectory.mm in Sources */,
+				ECF31A0404CB92069AE5C483 /* MediaDirectoryItem.mm in Sources */,
+				ECF31197B7E7F68189C4C8F6 /* MediaArtistItem.mm in Sources */,
+				ECF313EC3AFB824FB9B668AA /* MediaLibrary.mm in Sources */,
+				ECF31DDA95B97A5461674B9B /* Schema.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ECF31466F101977DC4BAAF01 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCEC0D263BD3AEAC644D48B1 /* Pods-mlfmdb.debug.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECF315219DC5B57A3E07BF68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		ECF31730E2ED87726A3A6B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECCE3742DD0A1F3AD29A7A39 /* Pods-mlfmdb.release.xcconfig */;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ECF31B39D8AC7CDBFCDD7C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECF3124A42C62FA1D368400B /* Build configuration list for PBXNativeTarget "mlfmdb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF31466F101977DC4BAAF01 /* Debug */,
+				ECF31730E2ED87726A3A6B20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECF31B080B727C5359433A1C /* Build configuration list for PBXProject "mlfmdb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECF31B39D8AC7CDBFCDD7C5A /* Debug */,
+				ECF315219DC5B57A3E07BF68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECF310E7A49B6FB486261ABE /* Project object */;
+}
