@@ -14,6 +14,7 @@
 		ECF31318FFE04A815C814E41 /* MediaGenre.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31D69CC71779D470C98FA /* MediaGenre.mm */; };
 		ECF313DFB2FFA3047BCCF7E9 /* MediaGenreItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */; };
 		ECF313EC3AFB824FB9B668AA /* MediaLibrary.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF317D87216308D295EE5D5 /* MediaLibrary.mm */; };
+		ECF314D7220BE3A709A433FA /* NSString+SHA1.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF319385D36B341B260838C /* NSString+SHA1.mm */; };
 		ECF3185686494BEE69F12D2D /* MediaDirectory.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */; };
 		ECF319845EF088A0C82BE21B /* MediaAlbum.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF3140E03BD021A4CBE9853 /* MediaAlbum.mm */; };
 		ECF3199493834BF97FCBCC7C /* MediaAlbumArtist.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */; };
@@ -61,12 +62,14 @@
 		ECF317D87216308D295EE5D5 /* MediaLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaLibrary.mm; sourceTree = "<group>"; };
 		ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumItem.mm; sourceTree = "<group>"; };
 		ECF318653F7B4C3335FEBB58 /* MediaItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaItem.mm; sourceTree = "<group>"; };
+		ECF319385D36B341B260838C /* NSString+SHA1.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+SHA1.mm"; sourceTree = "<group>"; };
 		ECF31947148A84DB610CABAE /* Schema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schema.h; sourceTree = "<group>"; };
 		ECF3195F8B691AECF8EB218C /* MediaAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAlbum.h; sourceTree = "<group>"; };
 		ECF31AC49F1D13736C7E1C6A /* MediaLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaLibrary.h; sourceTree = "<group>"; };
 		ECF31BB745FA7496330846C5 /* MediaDirectoryItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaDirectoryItem.mm; sourceTree = "<group>"; };
 		ECF31BDFE3212207D47A7987 /* mlfmdb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mlfmdb; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF31C6514D718283627DA1A /* MediaAlbumItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaAlbumItem.h; sourceTree = "<group>"; };
+		ECF31C7CC8A38FA86B0B3341 /* NSString+SHA1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SHA1.h"; sourceTree = "<group>"; };
 		ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumArtist.mm; sourceTree = "<group>"; };
 		ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaDirectory.mm; sourceTree = "<group>"; };
 		ECF31D03764A70C206054F71 /* MediaArtistItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaArtistItem.mm; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				ECF31D591C9A41EC871C60AC /* NSString+Utils.h */,
 				ECF31697C3CA6740172325CA /* NSString+Pinyin.mm */,
 				ECF310AC9B7E2F0918B92AB7 /* NSString+Pinyin.h */,
+				ECF319385D36B341B260838C /* NSString+SHA1.mm */,
+				ECF31C7CC8A38FA86B0B3341 /* NSString+SHA1.h */,
 			);
 			path = mlfmdb;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				ECF31BDB2799D503B9B8B8B8 /* MediaLibrary+Operation.mm in Sources */,
 				ECF31106365F7C5A4C8323C4 /* NSString+Utils.mm in Sources */,
 				ECF31BEC58748BB62CCC2FAE /* NSString+Pinyin.mm in Sources */,
+				ECF314D7220BE3A709A433FA /* NSString+SHA1.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

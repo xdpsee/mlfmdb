@@ -8,10 +8,11 @@ static void __test();
 
 int main(int argc, const char *argv[]) {
 
-    [MediaLibrary sharedInstance];
+    @autoreleasepool {
+        [MediaLibrary sharedInstance];
 
-    __test();
-
+        __test();
+    }
 
     return 0;
 }
@@ -19,12 +20,10 @@ int main(int argc, const char *argv[]) {
 
 void __test() {
 
-
     MediaItem *mediaItem = [[MediaItem alloc] init];
 
-    mediaItem.id = @"123456789000";
     mediaItem.source = 0;
-    mediaItem.uri = @"file:///Users/zhenhui/audio_test/za112.flac";
+    mediaItem.uri = @"/Users/zhenhui/audio_test/za112.flac";
     mediaItem.title = @"不知道";
     mediaItem.grouping = @"B";
     mediaItem.artist = @"李克勤";

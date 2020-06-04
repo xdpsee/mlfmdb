@@ -5,7 +5,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface MediaItem : NSObject
 
 @property(nonatomic, copy) NSString *id;

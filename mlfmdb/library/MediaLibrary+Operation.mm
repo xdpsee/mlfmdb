@@ -63,9 +63,20 @@ static NSString *UNKNOWN = @"未知";
         success = [self bindArtist:artistId item:mediaItem.id inDB:db];
         success &= [self bindAlbum:albumId item:mediaItem.id inDB:db];
         success &= [self bindGenre:genreId item:mediaItem.id inDB:db];
+        success &= [self bindAlbum:albumId artist:artistId inDB:db];
         if (!success) {
             *rollback = YES;
             return;
+        }
+
+        if (mediaItem.source == 0) { // local file
+            NSInteger directoryId = [self insertDirectory:mediaItem inDB:db];
+            if (directoryId > 0 && [self bindDirectory:directoryId item:mediaItem.id inDB:db]) {
+                success = YES;
+            } else {
+                *rollback = YES;
+                success = NO;
+            }
         }
 
         result = success;
@@ -74,28 +85,29 @@ static NSString *UNKNOWN = @"未知";
     return result;
 }
 
-
 #pragma mark - Private Methods
 
 - (void)prepare:(MediaItem *)mediaItem {
 
-    if (mediaItem.title.isEmpty) {
+    mediaItem.id = [mediaItem.uri sha1];
+
+    if (!mediaItem.title || [mediaItem.title isEmpty]) {
         mediaItem.title = [self extractFilenameFromUri:mediaItem.uri];
     }
 
     mediaItem.grouping = [mediaItem.title headLetter];
 
-    if (mediaItem.artist.isEmpty) {
+    if (!mediaItem.artist || [mediaItem.artist isEmpty]) {
         mediaItem.artist = UNKNOWN;
     }
-    if (mediaItem.album.isEmpty) {
+    if (!mediaItem.album || [mediaItem.album isEmpty]) {
         mediaItem.album = UNKNOWN;
     }
-    if (mediaItem.genre.isEmpty) {
+    if (!mediaItem.genre || [mediaItem.genre isEmpty]) {
         mediaItem.genre = UNKNOWN;
     }
 
-    if (mediaItem.composer.isEmpty) {
+    if (!mediaItem.composer || [mediaItem.composer isEmpty]) {
         mediaItem.composer = UNKNOWN;
     }
 
@@ -106,6 +118,7 @@ static NSString *UNKNOWN = @"未知";
     if (!mediaItem.modifiedDate) {
         mediaItem.modifiedDate = [NSDate now];
     }
+
 }
 
 - (NSInteger)insertArtist:(NSString *)artist inDB:(FMDatabase *)db ignoreUnique:(BOOL)ignore {
@@ -166,6 +179,17 @@ static NSString *UNKNOWN = @"未知";
     }
 
     return genreId;
+
+}
+
+- (NSInteger)insertDirectory:(MediaItem *)mediaItem inDB:(FMDatabase *)db {
+
+    if (mediaItem.source != 0) {
+        return 0;
+    }
+
+    // TODO:
+    return 0;
 
 }
 
@@ -346,6 +370,26 @@ static NSString *UNKNOWN = @"未知";
     BOOL success = [db executeUpdate:@"insert or ignore into genre_items(genre_id, item_id) values(?,?)" values:@[@(genreId), itemId] error:&error];
     if (error) {
         NSLog(@"bindGenre:item:inDB: error, %@", error);
+    }
+
+    return success;
+}
+
+- (BOOL)bindAlbum:(NSInteger)albumId artist:(NSInteger)artistId inDB:(FMDatabase *)db {
+    NSError *error = nil;
+    BOOL success = [db executeUpdate:@"insert or ignore into album_artists(album_id, artist_id) values(?,?)" values:@[@(albumId), @(artistId)] error:&error];
+    if (error) {
+        NSLog(@"bindGenre:item:inDB: error, %@", error);
+    }
+
+    return success;
+}
+
+- (BOOL)bindDirectory:(NSInteger)directoryId item:(NSString *)itemId inDB:(FMDatabase *)db {
+    NSError *error = nil;
+    BOOL success = [db executeUpdate:@"insert or ignore into directory_items(directoryId, itemId) values(?,?)" values:@[@(directoryId), itemId] error:&error];
+    if (error) {
+        NSLog(@"bindDirectory:item:inDB: error, %@", error);
     }
 
     return success;

@@ -4,11 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NSString+Pinyin.h"
-#import "NSString+SHA1.h"
 
-@interface NSString (Utils)
 
-- (BOOL) isEmpty;
+@interface NSString (SHA1)
+
+- (NSString *)sha1;
 
 @end
