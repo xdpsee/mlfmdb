@@ -8,9 +8,9 @@
 
 @interface MediaDirectory : NSObject
 
-@property(nonatomic, retain) NSNumber *id;
-@property(nonatomic, copy) NSString *parent;
+@property(nonatomic, assign) NSInteger id;
 @property(nonatomic, copy) NSString *name;
-
+@property(nonatomic, copy) NSString *grouping;
+@property(nonatomic, copy) NSString *parent;
 
 @end

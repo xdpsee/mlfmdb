@@ -7,13 +7,13 @@
 
 
 @implementation MediaDirectory
-@synthesize id = _id, parent = _parent, name = _name;
+@synthesize id = _id, parent = _parent, name = _name, grouping = _grouping;
 
 - (void)dealloc {
 
-    _id = nil;
-    _parent = nil;
     _name = nil;
+    _grouping = nil;
+    _parent = nil;
 
 }
 

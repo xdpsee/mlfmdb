@@ -1,8 +1,10 @@
 
 #import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
 #import "MediaItem.h"
 #import "MediaLibrary.h"
 #import "MediaLibrary+Operation.h"
+#import "NSString+SHA1.h"
 
 static void __test();
 
@@ -24,6 +26,7 @@ void __test() {
 
     mediaItem.source = 0;
     mediaItem.uri = @"/Users/zhenhui/audio_test/za112.flac";
+    mediaItem.id = [mediaItem.uri sha1];
     mediaItem.title = @"不知道";
     mediaItem.grouping = @"B";
     mediaItem.artist = @"李克勤";
@@ -36,6 +39,9 @@ void __test() {
     mediaItem.createdDate = [NSDate now];
     mediaItem.modifiedDate = [NSDate now];
 
+
+    CFTimeInterval c = CACurrentMediaTime();
     [[MediaLibrary sharedInstance] insertMediaItem:mediaItem];
+    NSLog(@"use time: %@", @(CACurrentMediaTime() - c));
 
 }

@@ -84,6 +84,7 @@ NSString *const kCreateMediaDirectoryTable = @"create table if not exists direct
                                              "    id     integer      not null primary key autoincrement,\n"
                                              "    parent varchar(256) not null,\n"
                                              "    name   varchar(256) not null,\n"
+                                             "    grouping   char not null,\n"
                                              "    constraint uk_path unique (parent, name)\n"
                                              ");";
 

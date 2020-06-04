@@ -70,7 +70,7 @@ static NSString *UNKNOWN = @"未知";
         }
 
         if (mediaItem.source == 0) { // local file
-            NSInteger directoryId = [self insertDirectory:mediaItem inDB:db];
+            NSInteger directoryId = [self createDirectory:mediaItem inDB:db];
             if (directoryId > 0 && [self bindDirectory:directoryId item:mediaItem.id inDB:db]) {
                 success = YES;
             } else {
@@ -88,8 +88,6 @@ static NSString *UNKNOWN = @"未知";
 #pragma mark - Private Methods
 
 - (void)prepare:(MediaItem *)mediaItem {
-
-    mediaItem.id = [mediaItem.uri sha1];
 
     if (!mediaItem.title || [mediaItem.title isEmpty]) {
         mediaItem.title = [self extractFilenameFromUri:mediaItem.uri];
@@ -182,16 +180,51 @@ static NSString *UNKNOWN = @"未知";
 
 }
 
-- (NSInteger)insertDirectory:(MediaItem *)mediaItem inDB:(FMDatabase *)db {
+- (NSInteger)createDirectory:(MediaItem *)mediaItem inDB:(FMDatabase *)db {
 
     if (mediaItem.source != 0) {
         return 0;
     }
 
-    // TODO:
-    return 0;
+    NSMutableArray<NSString *> *parts = [NSMutableArray arrayWithArray:[mediaItem.uri componentsSeparatedByString:@"/"]];
+    [parts removeLastObject];
+    [parts removeObject:@""];
 
+    NSInteger dirId = 0;
+    for (NSUInteger i = 0; i < parts.count; ++i) {
+        NSArray<NSString *> *parentParts = i == 0 ? @[@""] : [parts subarrayWithRange:NSMakeRange(0, i)];
+        NSString *parentDir = [@"/" stringByAppendingString:[parentParts componentsJoinedByString:@"/"]];
+        NSString *currentDir = parts[i];
+        dirId = [self insertDir:currentDir parent:parentDir inDB:db];
+        if (dirId > 0) {
+            NSLog(@"insert directory: id = %@ %@, %@", @(dirId), parentDir, currentDir);
+        } else {
+            NSLog(@"insert directory error: %@, %@", parentDir, currentDir);
+            break;
+        }
+    }
+
+    return dirId;
 }
+
+- (NSInteger)insertDir:(NSString *)dir parent:(NSString *)parent inDB:(FMDatabase *)db {
+
+    NSInteger dirId = 0;
+    NSError *error;
+    BOOL success = [db executeUpdate:@"insert or ignore into directories(name,grouping,parent) values(?,?,?)"
+                              values:@[dir, [dir headLetter], parent]
+                               error:&error];
+    if (success) {
+        dirId = [self selectDirectoryId:dir parent:parent inDB:db];
+    }
+
+    if (error) {
+        NSLog(@"insertDir:parent:inDB: error, %@", error);
+    }
+
+    return dirId;
+}
+
 
 - (NSString *)extractFilenameFromUri:(NSString *)uri {
 
@@ -387,12 +420,28 @@ static NSString *UNKNOWN = @"未知";
 
 - (BOOL)bindDirectory:(NSInteger)directoryId item:(NSString *)itemId inDB:(FMDatabase *)db {
     NSError *error = nil;
-    BOOL success = [db executeUpdate:@"insert or ignore into directory_items(directoryId, itemId) values(?,?)" values:@[@(directoryId), itemId] error:&error];
+    BOOL success = [db executeUpdate:@"insert or ignore into directory_items(directory_id, item_id) values(?,?)" values:@[@(directoryId), itemId] error:&error];
     if (error) {
         NSLog(@"bindDirectory:item:inDB: error, %@", error);
     }
 
     return success;
+}
+
+- (NSInteger)selectDirectoryId:(NSString *)dir parent:(NSString *)parent inDB:(FMDatabase *)db {
+    NSError *error = nil;
+    FMResultSet *rs = [db executeQuery:@"select id from directories where parent = ? and name = ? limit 1"
+                                values:@[parent, dir]
+                                 error:&error];
+    if (error) {
+        NSLog(@"selectDirectoryId:parent:inDB: error, %@", error);
+    }
+
+    if (rs.next) {
+        return [rs intForColumnIndex:0];
+    }
+
+    return 0;
 }
 
 @end
