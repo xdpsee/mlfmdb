@@ -10,7 +10,6 @@
 @synthesize id = _id, title = _title, homonym = _homonym, grouping = _grouping, comment = _comment, createdDate = _createdDate, modifiedDate = _modifiedDate;
 
 - (void)dealloc {
-    _id = nil;
     _title = nil;
     _grouping = nil;
     _comment = nil;

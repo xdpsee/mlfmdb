@@ -19,16 +19,13 @@ NSString *const kCreateMediaItemTable = @"create table if not exists medias\n"
                                         "    created_date  datetime     not null,\n"
                                         "    modified_date datetime     not null\n"
                                         ");";
-NSString *const kInsertMediaItemTable = @"insert into medias"
-                                        "(id,source,uri,grouping,title,artist,album,genre,composer,track,year,duration,created_date,modified_date) "
-                                        "values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 NSString *const kCreateMediaArtistTable = @"create table if not exists artists\n"
                                           "(\n"
                                           "    id            integer     not null primary key autoincrement,\n"
                                           "    grouping      char        not null,\n"
                                           "    title         varchar(64) not null,\n"
-                                          "    homonym       integer      default 0,\n"
+                                          "    homonym       integer      default 0, \n"
                                           "    comment       varchar(256) default '',\n"
                                           "    created_date  datetime    not null,\n"
                                           "    modified_date datetime    not null,\n"

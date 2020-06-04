@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A2AACB5E307E10A5F50DF0E2 /* libPods-mlfmdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E92553129158B47706166F4 /* libPods-mlfmdb.a */; };
 		ECF310AB57023FCB81C72DE9 /* MediaItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF318653F7B4C3335FEBB58 /* MediaItem.mm */; };
+		ECF31106365F7C5A4C8323C4 /* NSString+Utils.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF3171717D45C72A43C17F3 /* NSString+Utils.mm */; };
 		ECF31197B7E7F68189C4C8F6 /* MediaArtistItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31D03764A70C206054F71 /* MediaArtistItem.mm */; };
 		ECF31318FFE04A815C814E41 /* MediaGenre.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31D69CC71779D470C98FA /* MediaGenre.mm */; };
 		ECF313DFB2FFA3047BCCF7E9 /* MediaGenreItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */; };
@@ -18,7 +19,8 @@
 		ECF3199493834BF97FCBCC7C /* MediaAlbumArtist.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */; };
 		ECF31A0404CB92069AE5C483 /* MediaDirectoryItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31BB745FA7496330846C5 /* MediaDirectoryItem.mm */; };
 		ECF31A666811BDB6FA560FF5 /* MediaAlbumItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */; };
-		ECF31BDB2799D503B9B8B8B8 /* MediaLibrary+Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.m */; };
+		ECF31BDB2799D503B9B8B8B8 /* MediaLibrary+Operation.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.mm */; };
+		ECF31BEC58748BB62CCC2FAE /* NSString+Pinyin.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31697C3CA6740172325CA /* NSString+Pinyin.mm */; };
 		ECF31DC244AF4DECCA7BC9D8 /* MediaArtist.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31FBFC1DD17DD6BEB1448 /* MediaArtist.mm */; };
 		ECF31DDA95B97A5461674B9B /* Schema.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF31E9A66EB59C90ECD02DA /* Schema.mm */; };
 		ECF31E7B2B23B6CBD135F83C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = ECF3122F16B76D7ACFC6EDC2 /* main.mm */; };
@@ -40,6 +42,7 @@
 		9E92553129158B47706166F4 /* libPods-mlfmdb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mlfmdb.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCEC0D263BD3AEAC644D48B1 /* Pods-mlfmdb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlfmdb.debug.xcconfig"; path = "Target Support Files/Pods-mlfmdb/Pods-mlfmdb.debug.xcconfig"; sourceTree = "<group>"; };
 		ECCE3742DD0A1F3AD29A7A39 /* Pods-mlfmdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mlfmdb.release.xcconfig"; path = "Target Support Files/Pods-mlfmdb/Pods-mlfmdb.release.xcconfig"; sourceTree = "<group>"; };
+		ECF310AC9B7E2F0918B92AB7 /* NSString+Pinyin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Pinyin.h"; sourceTree = "<group>"; };
 		ECF31141A20BC01B7C020E9A /* MediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaItem.h; sourceTree = "<group>"; };
 		ECF311C5897A3BC7E1D494F1 /* MediaLibrary+Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MediaLibrary+Operation.h"; sourceTree = "<group>"; };
 		ECF311EBC4EB361A095077F9 /* MediaGenre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaGenre.h; sourceTree = "<group>"; };
@@ -47,12 +50,14 @@
 		ECF3122F16B76D7ACFC6EDC2 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		ECF312EF67E1A6887BDF0DE5 /* MediaGenreItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaGenreItem.mm; sourceTree = "<group>"; };
 		ECF3133DC71CBB3FA5162A12 /* MediaDirectoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDirectoryItem.h; sourceTree = "<group>"; };
-		ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MediaLibrary+Operation.m"; sourceTree = "<group>"; };
+		ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "MediaLibrary+Operation.mm"; sourceTree = "<group>"; };
 		ECF31383AE774AFCEADA49D4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		ECF313868AF818239797F76D /* MediaDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDirectory.h; sourceTree = "<group>"; };
 		ECF3140E03BD021A4CBE9853 /* MediaAlbum.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbum.mm; sourceTree = "<group>"; };
 		ECF31482837C5C2C850D1371 /* MediaArtistItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaArtistItem.h; sourceTree = "<group>"; };
 		ECF3158B60853909E67F58F0 /* MediaGenreItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaGenreItem.h; sourceTree = "<group>"; };
+		ECF31697C3CA6740172325CA /* NSString+Pinyin.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+Pinyin.mm"; sourceTree = "<group>"; };
+		ECF3171717D45C72A43C17F3 /* NSString+Utils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "NSString+Utils.mm"; sourceTree = "<group>"; };
 		ECF317D87216308D295EE5D5 /* MediaLibrary.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaLibrary.mm; sourceTree = "<group>"; };
 		ECF31848578CDEC63BE86E43 /* MediaAlbumItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumItem.mm; sourceTree = "<group>"; };
 		ECF318653F7B4C3335FEBB58 /* MediaItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaItem.mm; sourceTree = "<group>"; };
@@ -65,6 +70,7 @@
 		ECF31CEE76E1391DFAC9DA15 /* MediaAlbumArtist.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaAlbumArtist.mm; sourceTree = "<group>"; };
 		ECF31CFB23F693D0F0FBD693 /* MediaDirectory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaDirectory.mm; sourceTree = "<group>"; };
 		ECF31D03764A70C206054F71 /* MediaArtistItem.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaArtistItem.mm; sourceTree = "<group>"; };
+		ECF31D591C9A41EC871C60AC /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		ECF31D69CC71779D470C98FA /* MediaGenre.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MediaGenre.mm; sourceTree = "<group>"; };
 		ECF31E9A66EB59C90ECD02DA /* Schema.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Schema.mm; sourceTree = "<group>"; };
 		ECF31EF01B11C45220781AA4 /* MediaArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaArtist.h; sourceTree = "<group>"; };
@@ -97,6 +103,10 @@
 				ECF3122F16B76D7ACFC6EDC2 /* main.mm */,
 				ECF31BF169C7011A4A0E64E4 /* library */,
 				ECF31383AE774AFCEADA49D4 /* Constants.h */,
+				ECF3171717D45C72A43C17F3 /* NSString+Utils.mm */,
+				ECF31D591C9A41EC871C60AC /* NSString+Utils.h */,
+				ECF31697C3CA6740172325CA /* NSString+Pinyin.mm */,
+				ECF310AC9B7E2F0918B92AB7 /* NSString+Pinyin.h */,
 			);
 			path = mlfmdb;
 			sourceTree = "<group>";
@@ -138,7 +148,7 @@
 				ECF31AC49F1D13736C7E1C6A /* MediaLibrary.h */,
 				ECF31947148A84DB610CABAE /* Schema.h */,
 				ECF31E9A66EB59C90ECD02DA /* Schema.mm */,
-				ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.m */,
+				ECF31353A8D806C8F83F70AE /* MediaLibrary+Operation.mm */,
 				ECF311C5897A3BC7E1D494F1 /* MediaLibrary+Operation.h */,
 			);
 			path = library;
@@ -251,7 +261,9 @@
 				ECF31197B7E7F68189C4C8F6 /* MediaArtistItem.mm in Sources */,
 				ECF313EC3AFB824FB9B668AA /* MediaLibrary.mm in Sources */,
 				ECF31DDA95B97A5461674B9B /* Schema.mm in Sources */,
-				ECF31BDB2799D503B9B8B8B8 /* MediaLibrary+Operation.m in Sources */,
+				ECF31BDB2799D503B9B8B8B8 /* MediaLibrary+Operation.mm in Sources */,
+				ECF31106365F7C5A4C8323C4 /* NSString+Utils.mm in Sources */,
+				ECF31BEC58748BB62CCC2FAE /* NSString+Pinyin.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

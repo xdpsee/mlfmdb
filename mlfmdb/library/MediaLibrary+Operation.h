@@ -7,7 +7,7 @@
 #import "MediaLibrary.h"
 
 @class MediaItem;
-
+@class FMDatabaseQueue;
 
 @interface MediaLibrary (Operation)
 

@@ -8,7 +8,7 @@
 
 @interface MediaAlbum : NSObject
 
-@property(nonatomic, retain) NSNumber *id;
+@property(nonatomic, assign) NSInteger id;
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, assign) NSInteger homonym;
 @property(nonatomic, copy) NSString *grouping;

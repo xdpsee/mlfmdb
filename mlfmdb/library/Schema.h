@@ -14,7 +14,3 @@ extern NSString *const kCreateMediaGenreItemTable;
 extern NSString *const kCreateMediaDirectoryTable;
 extern NSString *const kCreateMediaDirectoryItemTable;
 
-/**
- * insert
- */
-extern NSString *const kInsertMediaItemTable;
